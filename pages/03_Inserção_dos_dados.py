@@ -16,16 +16,12 @@ def validar_data(data):
     except ValueError:
         return False
 
-# Carregar ou criar o DataFrame onde os dados serão armazenados
-try:
-    # Tentar carregar o DataFrame existente
-    df = pd.read_csv('dados_jogos.csv')  # Substitua pelo nome do seu arquivo CSV
-except FileNotFoundError:
-    # Se o arquivo não existir, cria um DataFrame vazio
-    df = pd.DataFrame(columns=['URL do Jogo', 'Nome do Jogo', 'Review do Jogo', 'Empresa que Publicou o Jogo',
-                               'Tags do Jogo', 'Tipo de Jogo', 'Linguagens do Jogo', 'Gênero do Jogo',
-                               'Descrição do Jogo', 'Preço do Jogo', 'Valor do Desconto', 'Data de Lançamento',
-                               'Total de Conquistas', 'Empresa Desenvolvedora', 'Avaliação Geral'])
+
+# Se o arquivo não existir, cria um DataFrame vazio
+df = pd.DataFrame(columns=['URL do Jogo', 'Nome do Jogo', 'Review do Jogo', 'Empresa que Publicou o Jogo',
+                            'Tags do Jogo', 'Tipo de Jogo', 'Linguagens do Jogo', 'Gênero do Jogo',
+                            'Descrição do Jogo', 'Preço do Jogo', 'Valor do Desconto', 'Data de Lançamento',
+                            'Total de Conquistas', 'Empresa Desenvolvedora', 'Avaliação Geral'])
 
 # Função para inserir os dados no DataFrame
 def inserir_dados():
